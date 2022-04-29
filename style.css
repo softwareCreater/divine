@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;700&family=Pacifico&family=Rubik+Puddles&family=Source+Code+Pro:wght@500&family=Square+Peg&family=Water+Brush&family=Work+Sans&display=swap");
+/* font-family: 'Work Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;700&family=Pacifico&family=Radio+Canada:wght@500&family=Rubik+Puddles&family=Source+Code+Pro:wght@500&family=Square+Peg&family=Water+Brush&family=Work+Sans&display=swap");
+/* font-family: 'Radio Canada', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --heading: rgb(0, 10, 45);
+  --para: #777;
+  --para-tint: #e4e4e4;
+  --white: #fff;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249, 249, 255);
+  --gradient: linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
+  --gradient-support: -webkit-linear-gradient(
+    0deg,
+    rgb(132, 144, 255) 0%,
+    rgb(98, 189, 252) 100%
+  );
+  --black:#212529;
+  --shadow: 0px 0px 20px  rgb(132, 144, 255);
+}
+html {
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Radio Canada", sans-serif;
+}
+h1{
+    color: var(--heading);
+    font-size: 6rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+p{
+    color: var(--para);
+    line-height: 1.6;
+    font-size: 1.7rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* ***********************header section start**************************** */
+
+.header{
+    padding: 0 4.8rem;
+    height: 8rem;
+    width: 100vw;
+    /* height: 100vh; */
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    position: relative;
+}
+.header .logo{
+    color: var(--helper);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+.navbar_list{
+    display: flex;
+    gap: 4.8rem;
+    transition: .3s;
+}
+.navbar_link:link,
+.navbar_link:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Radio Canada", sans-serif;
+    transition: .3s linear;
+    color: var(--black);
+}
+.navbar_link:hover,
+.navbar_link:active{
+    color: var(--helper);
+}
+
+/* ************************ reuseable codes *********************** */
+
+.section{
+    padding: 9rem 0;
+}
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+    gap: 9rem;
+}
+.grid-two-column{
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-three-column{
+    grid-template-columns: repeat(3,1fr);
+}
+.btn{
+    background:var(--gradient);
+    padding: 1.6rem 1.2rem;
+    border: none;
+    color:var(--helper-tint);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    width: 30%;
+    text-align: center;
+    -webkit-transition:.3s ;
+}
+.btn:hover, .btn:active{
+    box-shadow: 0 2rem 2rem var(--shadow);
+}
+
+/* ******************navbar responsive codes************************ */
+@media(max-width:768px){
+    /* html{ */
+        /* overflow: hidden; */
+    /* } */
+    .header{
+        display: block;
+        padding:0;
+        position: relative;
+    }
+    .header .menu{
+        position: absolute;
+        right: 2rem;
+        border: 1px solid gray;
+        border-radius: .2rem;
+        box-shadow: 0 0 2px var(--black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:.8rem;
+        cursor: pointer;
+        font-size: 3rem;
+        top: -.5rem;
+        transform: rotate(90deg);
+    }
+    .header .menu:focus{
+        border: 2px solid var(--helper);
+    }
+  .header .logo{
+        font-size: 2.5rem;
+        letter-spacing: -.2rem;
+        margin-left: 2rem;
+    }
+
+    .header .navbar_list{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        left: -100%;
+        height: 94.1vh;
+        /* background: var(--helper); */
+        background: rgba(132,144,255);
+    }
+  
+}
+
+
+/* ************************ hero section start *********************** */
+
+.section-hero{
+    background: var(--bg);
+    padding: 5rem;
+}
+.section-hero-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 3rem; */
+    /* align-items: center; */
+}
+
+.hero-top-data{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--helper);
+}
+.hero-heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 5.4rem;
+}
+.hero-para{
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+
+}
+.hero-image {
+    max-width: 80%;
+}
+
+@media(max-width:768px){
+    .section-hero{
+        padding: 5rem 2rem;
+
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .header .hero-para{
+        font-size: 2.1rem;
+        width: 60vw;
+    }
+    .hero-heading{
+        font-size: 3.2rem;
+    }
+    .btn{
+        width: 40vw;
+        margin-top: -2rem;
+        padding: 1rem;
+    }
+    .hero-image{
+        max-width:100%;
+    }
+}
+
+
+
+/* **********************************courses section start **************************** */
+.sections{
+    /* position: relative; */
+    width: 100vw;
+    height: 100vh;
+    /* overflow: auto; */
+    z-index: 3;
+}
+.card{
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    gap: 2rem;
+    padding:  4rem;
+    max-width: 140rem;
+    background: var(--bg);
+}
+.grid-three-column{
+    display: grid;
+}
+.course-heading{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+}
+.card-data{
+    border: 1px solid #333;
+    /* padding:.3rem 3rem; */
+}
+.card-image{
+    max-width: 100%;
+}
+.card-heading{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* *******************responsive code for courses************************* */
+@media(max-width:768px){
+    .grid-three-column{
+        grid-template-columns: 1fr;
+    }
+    .course-heading{
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+

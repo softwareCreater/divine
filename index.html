@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>divineEduMantra</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <p class="logo">DivineEduMantra</p>
+      <div class="menu" id="toggle">
+        <div class="toggle">|||</div>
+      </div>
+      <nav class="navbar">
+        <ul class="navbar_list">
+          <li><a href="#" class="navbar_link home_link">home</a></li>
+          <li><a href="#" class="navbar_link about_link">about</a></li>
+          <li><a href="#" class="navbar_link course_link">courses</a></li>
+          <li><a href="#" class="navbar_link gallery_link">gallery</a></li>
+          <li><a href="#" class="navbar_link event_link">events</a></li>
+          <li><a href="#" class="navbar_link contact_link">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- *******************hero section start********************* -->
+    <main>
+      <section class="section-hero section">
+        <div class="container grid grid-two-column">
+          <div class="section-hero-data">
+            <p class="hero-top-data">welcome to,</p>
+            <h1 class="hero-heading">DIVINE EDU MANTRA</h1>
+            <p class="hero-para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
+              dolorum aliquid provident, hic nulla.
+            </p>
+            <a href="#" class="btn knwo-about-me">Know about me</a>
+          </div>
+
+        <!-- hero section right side  -->
+        <div class="section-hero-image">
+            <img src="res.jpg" alt="our images" class="hero-image">
+        </div>
+    </div>
+      </section>
+    </main>
+
+
+    <!-- ****************************courses section start ****************************************** -->
+
+    <section class="sections">
+
+        <div class="grid-card">
+          <h2 class="course-heading">Courses we recommended</h2>
+          <div class="card grid-three-column">
+            
+            <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">html </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">css </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">ccc </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">adca </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">dca </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          <div class="card-data">
+            <img src="res.jpg" alt="" class="card-image">
+            <h3 class="card-heading">tally </h3>
+            <p>Lorem ipsum, dolor sit amet </p>
+          </div>
+          
+         
+          </div>
+          
+        </div>
+    </section>
+
+
+    <script>
+      const toggle = document.querySelector('.navbar_list');
+      let close = document.querySelector('#toggle');
+      const toggleOff = ()=>{
+          toggle.style.left="-100%";
+        }
+      document.querySelector('#toggle').addEventListener('click',()=>{
+        // .style.left="0%";
+        
+        if(toggle.style.left="-100%"){
+          toggle.style.left='0';
+          close.innerHTML="close";
+          // toggleOff();
+        }
+      });        
+      document.querySelector('#toggle').addEventListener('dblclick',()=>{
+        if(close.innerHTML=="close"){
+          // toggleOff();
+
+        }
+        
+      })
+    </script>
+  </body>
+</html>
